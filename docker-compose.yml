@@ -1,0 +1,6 @@
+services:
+  jwt-lab:
+    build: .
+    container_name: jwt-jwk-lab
+    ports:
+      - "8080:8080"
