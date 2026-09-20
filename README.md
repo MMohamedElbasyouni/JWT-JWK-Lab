@@ -60,7 +60,7 @@ In this lab, the token is signed with the asymmetric algorithm RS256, so we can'
 
 That leaves us with the verification stage. However, this stage is performed entirely by the server — unlike signing, we can't manipulate it directly.
 
-The trick is to manipulate the JWT so that the server ends up verifying the token with a key of our choosing, instead of its own trusted key.
+The solution for this problem is to manipulate the JWT so that the server ends up verifying the token with a key of our choosing, instead of its own trusted key.
 
 We can achieve this by injecting a `jwk` parameter into the header, which makes the server verify the signature directly with the key we provide.
 
